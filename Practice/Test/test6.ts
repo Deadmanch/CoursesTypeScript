@@ -55,6 +55,17 @@ class Card {
 		if(!this.delivey) {
 			throw new Error('Не указан способ доставки')
 		}
-		return 	{success: true};
+		return 	this.delivey;
 	}
 }
+
+const cart = new Card();
+cart.addProduct(new Product(1, 'Вафли', 80));
+cart.addProduct(new Product(2, 'Конфеты-Ромашка', 200));
+cart.addProduct(new Product(3, 'Шоколад', 100));
+cart.deleteProduct(1);
+cart.setDelivery(new HomeDelivery(new Date(), 'г.Олешки, ул. Самарца 79'));
+console.log(cart.getSum());
+console.log(cart.checkOut());
+
+

@@ -1,3 +1,4 @@
+"use strict";
 // // class User {
 // // 	name:string='user';
 // //
@@ -24,12 +25,9 @@
 // // 		this.code = code ?? 500;
 // // 	}
 // // }
-
 // // Когда композиция лучше наследования
-
 // class User {
 // 	name: string;
-	
 // 	constructor(name: string) {
 // 		this.name = name;
 // 	}
@@ -40,19 +38,14 @@
 // 		return this.filter(u => u.name === name);
 // 	}
 // }
-
 // const users = new Users;
 // users.push(new User('Danil'));
-
 // // Лучше так
-
 // class UserList {
 // 	users: User[];
-	
 // 	push(u: User) {
 // 		this.users.push(u)
 // 	}
-	
 // 	constructor(users: User[]) {
 // 		this.users = users;
 // 	}
@@ -61,17 +54,13 @@
 // class Payment {
 // 	date: Date
 // }
-
 // class UserWithPayment extends Payment {
 // 	name: string;
 // }
-
 // // Так правильнее
-
 // class UserWithPayment2 {
 // 	user: User;
 // 	payment: Payment;
-	
 // 	constructor(user: User, payment: Payment) {
 // 		this.payment = payment;
 // 		this.user = user;
