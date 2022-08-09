@@ -1,31 +1,31 @@
-function logMiddleware<T>(data: T): T {
-	console.log(data);
-	return data;
-}
+// function logMiddleware<T>(data: T): T {
+// 	console.log(data);
+// 	return data;
+// }
 
-const res = logMiddleware<number>(10);
+// const res = logMiddleware<number>(10);
 
-function getSplitedHalf<T>(data: Array<T>): Array<T> {
-	const l = data.length / 2;
-	return data.splice(0, 1);
-}
+// function getSplitedHalf<T>(data: Array<T>): Array<T> {
+// 	const l = data.length / 2;
+// 	return data.splice(0, 1);
+// }
 
-getSplitedHalf<number>([1, 3, 4]);
+// getSplitedHalf<number>([1, 3, 4]);
 
-const split: <T>(data: Array<T>) => Array<T> = getSplitedHalf;
+// const split: <T>(data: Array<T>) => Array<T> = getSplitedHalf;
 
-interface ILogLine<T> {
-	timeStamp: Date;
-	data: T;
-}
+// interface ILogLine<T> {
+// 	timeStamp: Date;
+// 	data: T;
+// }
 
-type LogLineType<T> = {
-	timeStamp: Date;
-	data: T;
-};
-const logLine: LogLineType<{ a: number }> = {
-	timeStamp: new Date(),
-	data: {
-		a: 1,
-	},
-};
+// type LogLineType<T> = {
+// 	timeStamp: Date;
+// 	data: T;
+// };
+// const logLine: LogLineType<{ a: number }> = {
+// 	timeStamp: new Date(),
+// 	data: {
+// 		a: 1,
+// 	},
+// };
